@@ -1,4 +1,21 @@
 import React, {Component} from 'react';
+import './App.css';
+import InstructorApp from './components/InstructorApp';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="container">
+        <InstructorApp />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+/*
+import React, {Component} from 'react';
 import BoardMain from './components/BoardMain';
 import './App.css';
 
@@ -34,7 +51,7 @@ const boardmain = [
   'job': '디자이너'
   }
 ]
-  
+
 class App extends Component {
   render() {
     return (
@@ -62,34 +79,4 @@ class App extends Component {
 }
 
 export default App;
-
-/*Backup Init Script*/
-/*import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Board View Start!</h2>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-
 */
