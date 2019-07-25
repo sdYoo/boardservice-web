@@ -2,8 +2,18 @@
 1. React 설치(windows)
 https://leeph.tistory.com/25
 
-2. React 고객관리
+2. React 고객관리 참고
 https://ndb796.tistory.com/214?category=1030599
 
 3. React + Spring Boot 연동
 https://www.springboottutorial.com/spring-boot-react-full-stack-crud-maven-application
+
+4. 프로그램 실행순서
+
+1) App.js
+App.js에서 InstructorApp를 호출
+2) InstructorApp.jsx
+InstructorApp.jsx 에서 ListCoursesComponent를 호출
+3) ListCoursesComponent.jsx
+ListCoursesComponent.jsx 에서 springboot를 호출
+정확히는 refreshCourses 를 호출하면 CouserDataService.js를 호출하며 해당 js의 메소드에서 springboot 의 JAVA 메소드를 호출한다.
