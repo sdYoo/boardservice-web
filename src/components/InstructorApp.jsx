@@ -1,12 +1,21 @@
 import React from 'react';
-import ListCoursesComponent from './ListCoursesComponent';                                    
+import ListCoursesComponent from './ListCoursesComponent';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CourseComponent from './CourseComponent';          
 
 class InstructorApp extends React.Component {
     render() {
-        return (<>
-              <h1>Instructor Application</h1>
-              <ListCoursesComponent/>
-            </>
+        return (
+            <Router>
+                <>
+                <h1>Instructor Application</h1>
+                <Switch>
+                        <Route path="/" exact component={ListCoursesComponent} />
+                        <Route path="/courses" exact component={ListCoursesComponent} />
+                        <Route path="/courses/:id" component={CourseComponent} />
+                </Switch>
+                </>
+            </Router>
         )
     }
 }

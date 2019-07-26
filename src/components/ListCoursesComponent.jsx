@@ -12,36 +12,55 @@ class ListCoursesComponent extends React.Component {
             courses: [],
             message: null
         }
-        this.refreshCourses = this.refreshCourses.bind(this)
-        console.log("constructor(prop) 테스트 중입니다.");
+        
+        console.log("생성자 호출 : constructor(prop)");
+        console.log("조회 바인드 : this.refreshCourses.bind(this)");
+        this.refreshCourses = this.refreshCourses.bind(this);
+        
+        console.log("삭제 바인드 : this.deleteCourseClicked.bind(this)");
+        this.deleteCourseClicked = this.deleteCourseClicked.bind(this);
     }
 
     componentDidMount() {
-        console.log("componentDidMount() 테스트 중입니다.");
+        console.log("함수 호출 : componentDidMount()");
         this.refreshCourses();        
     }
 
     refreshCourses() {
+        console.log("함수 호출 : refreshCourses()");
         CourseDataService.retrieveAllCourses(INSTRUCTOR)//HARDCODED
             .then(
-                response => {
-                    console.log("retrieveAllCourses() 테스트 중입니다.");
+                response => {                    
                     console.log(response);
                     this.setState({ courses: response.data })
                 }
             )
     }
 
+    deleteCourseClicked(id) {
+        CourseDataService.deleteCourse(INSTRUCTOR, id)
+            .then(
+                response => {
+                    this.setState({ message: `Delete of course ${id} Successful` })
+                    this.refreshCourses()
+                }
+            )
+    
+    }
+
     render() {
+        console.log("함수 호출 : render()")
         return (
             <div className="container">
                 <h3>All Courses</h3>
+                {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
                 <div className="container">
                     <table className="table">
                         <thead>
                             <tr>
                                 <th>Id</th>
                                 <th>Description</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>

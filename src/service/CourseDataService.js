@@ -15,6 +15,16 @@ class CourseDataService {
         //console.log('executed service')
         return axios.delete(`${INSTRUCTOR_API_URL}/courses/${id}`);
     }
+
+    deleteCourseClicked(id) {
+        CourseDataService.deleteCourse(INSTRUCTOR, id)
+            .then(
+                response => {
+                    this.setState({ message: `Delete of course ${id} Successful` })
+                    this.refreshCourses()
+                }
+            )
+    }
 }
 
 export default new CourseDataService();
