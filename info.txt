@@ -19,3 +19,9 @@ ListCoursesComponent.jsx 에서 springboot를 호출
 정확히는 refreshCourses 를 호출하면 CouserDataService.js를 호출하며 해당 js의 메소드에서 springboot 의 JAVA 메소드를 호출한다.
 
 5. git commit
+-. git 상태확인
+git status 
+
+-. 변경된 파일을 stage 로 변경, staged 상태에서 commit이 가능
+git add -A 또는 --all
+git add "파일명"
