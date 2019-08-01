@@ -25,3 +25,6 @@ git status
 -. 변경된 파일을 stage 로 변경, staged 상태에서 commit이 가능
 git add -A 또는 --all
 git add "파일명"
+
+-. 변경된 파일 commit
+git commit -m "comment"
