@@ -28,3 +28,6 @@ git add "파일명"
 
 -. 변경된 파일 commit
 git commit -m "comment"
+
+-. 변경된 파일 git에 push
+git push
