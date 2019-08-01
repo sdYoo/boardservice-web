@@ -19,6 +19,11 @@ class ListCoursesComponent extends React.Component {
         
         console.log("삭제 바인드 : this.deleteCourseClicked.bind(this)");
         this.deleteCourseClicked = this.deleteCourseClicked.bind(this);
+
+        console.log("수정 바인드 : this.updateCourseClicked.bind(this)");
+        this.updateCourseClicked = this.updateCourseClicked.bind(this)
+
+        this.addCourseClicked = this.addCourseClicked.bind(this)
     }
 
     componentDidMount() {
@@ -48,6 +53,16 @@ class ListCoursesComponent extends React.Component {
     
     }
 
+    updateCourseClicked(id) {
+        console.log('updateCourseClicked(id): ' + id)
+        this.props.history.push(`/courses/${id}`)
+    }
+
+    addCourseClicked() {
+        console.log('addCourseClicked(): ')
+        this.props.history.push(`/courses/-1`)
+    }
+
     render() {
         console.log("함수 호출 : render()")
         return (
@@ -61,6 +76,7 @@ class ListCoursesComponent extends React.Component {
                                 <th>Id</th>
                                 <th>Description</th>
                                 <th>Delete</th>
+                                <th>Update</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,11 +87,15 @@ class ListCoursesComponent extends React.Component {
                                             <td>{course.id}</td>
                                             <td>{course.description}</td>
                                             <td><button className="btn btn-warning" onClick={() => this.deleteCourseClicked(course.id)}>삭제</button></td>
+                                            <td><button className="btn btn-success" onClick={() => this.updateCourseClicked(course.id)}>Update</button></td>
                                         </tr>
                                 )
                             }
                         </tbody>
                     </table>
+                </div>
+                <div className="row">
+                    <button className="btn btn-success" onClick={this.addCourseClicked}>Add</button>
                 </div>
             </div>
         )
