@@ -1,0 +1,13 @@
+version: 0.1 
+ 
+phases: 
+  pre_build: 
+    commands: 
+      - mvn clean 
+  build: 
+    commands: 
+      - mvn package 
+artifacts: 
+  files: 
+    - '**/*' 
+  base-directory: target/mwave 

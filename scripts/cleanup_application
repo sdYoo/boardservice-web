@@ -1,0 +1,3 @@
+#!/bin/bash -xe 
+# cleanup folder /data/web/www.mwave.me/static 
+rm -rf /data/web/www.mwave.me/static

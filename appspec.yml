@@ -1,0 +1,8 @@
+version: 0.0 
+os: linux 
+files: 
+  - source: /src/main/webapp/static 
+    destination: /data/web/www.mwave.me/static 
+hooks: 
+  BeforeInstall: 
+    - location: scripts/cleanup_application 
