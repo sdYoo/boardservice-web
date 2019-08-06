@@ -38,3 +38,7 @@ git remote set-url origin --push --add https://git-codecommit.ap-northeast-2.ama
 
 6. 도커 이미지
 https://codechacha.com/ko/dockerizing-react-with-nginx/
+https://yunsangjun.github.io/blog/cloud/2019/06/20/aws-cicd02.html
+
+1. src 밑에 DockerFile 생성
+2. docker build -t board-web
