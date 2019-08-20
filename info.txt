@@ -42,3 +42,11 @@ https://yunsangjun.github.io/blog/cloud/2019/06/20/aws-cicd02.html
 
 1. src 밑에 DockerFile 생성
 2. docker build -t board-web
+
+========================
+쿠버네티스 노드삭제
+========================
+kubectl get nodes
+kubectl drain "node-name"
+kubectl uncordon "node-name"
+kubectl delete node "node-name"
