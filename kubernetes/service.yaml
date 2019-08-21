@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: boardservice-frontend-lb-deployment
+  namespace: boardservice-frontend
+spec:
+  selector:
+    app: boardservice-frontend
+  type: LoadBalancer
+  ports:
+   -  protocol: TCP
+      port: 80
+      targetPort: 3000
