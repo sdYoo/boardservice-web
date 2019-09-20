@@ -1,5 +1,6 @@
 ## Board Service System
 본 프로젝트는 React+SpringBoot 기반의 공유 게시판 시스템 입니다.
+기본 구성은 아래 react app 기본 설치 메뉴얼을 참고로 작성하였습니다.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
