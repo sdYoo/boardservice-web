@@ -8,6 +8,9 @@ https://ndb796.tistory.com/214?category=1030599
 3. React + Spring Boot 연동
 https://www.springboottutorial.com/spring-boot-react-full-stack-crud-maven-application
 
+3-1. React 화면 구성
+https://electricburglar.tistory.com/146?category=710260
+
 4. 프로그램 실행순서
 
 1) App.js
