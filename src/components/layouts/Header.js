@@ -31,7 +31,7 @@ const Container = styled.div`
 
 const Element = styled.div`
     margin: 0 auto;
-    width: 1080px;
+    width: 100%;
     height: 100px;
     display: flex;
     flex-flow: row wrap;
