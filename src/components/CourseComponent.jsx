@@ -61,7 +61,7 @@ class CourseComponent extends React.Component  {
 
         return (
             <div>
-                <h3>Course</h3>
+                <h3>상세 조회 화면</h3>
                 <div className="container">
                     <Formik
                         initialValues={this.state}

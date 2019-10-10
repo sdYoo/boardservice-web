@@ -15,7 +15,7 @@ class Header extends Component {
                            alt="logo"
                         />
                     </Logo>
-                   <Search><h1>React Blog</h1></Search>
+                   <Search><h1>자바킹의 블로그 입니다.</h1></Search>
                 </Element>
             </Container>
         );
@@ -46,12 +46,12 @@ const ShortCut = styled.div`
 `
 const Logo = styled.div`
     order: 2;
-    width: 200%
+    width: 200px;
     height: 80px;
 `
 const Search = styled.div`
     order: 3;
     width: 880px;
     background-color: #78ffd6;
-    tetxt-align: center;
+    text-align: center;
 `

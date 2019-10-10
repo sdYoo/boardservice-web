@@ -26,16 +26,13 @@ const Nav = styled.div`
     border-bottom: 1px solid #d1d8e4;
 `
 const NavList = styled.ul`
-    margin: 0 auto;
     width: 1080px;
-    height: 100px;
     display: flex;
-    flex-flow: row wrap;
+    margin: 0 auto;
 `
 const NavItem = styled.li`
-    order: 1;
-    width: 100%;
-    height: 20px;
-    text-align: right;
-    background-color: #a8ff78;
+    width: 60%;
+    margin-left: 18px;
+    margin-top: 5px;
+    display: flex;
 `

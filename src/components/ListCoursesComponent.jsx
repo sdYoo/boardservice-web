@@ -68,7 +68,7 @@ class ListCoursesComponent extends React.Component {
         console.log("함수 호출 : render()")
         return (
             <div className="container">
-                <h3>All Courses</h3>
+                <h3>전체 조회 화면</h3>
                 {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
                 <div className="container">
                     <table className="table">
