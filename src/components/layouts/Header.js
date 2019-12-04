@@ -15,7 +15,7 @@ class Header extends Component {
                            alt="logo"
                         />
                     </Logo>
-                   <Search><h1>자바킹의 블로그 입니다.</h1></Search>
+                   <Search><h1>[자바킹의 블로그 입니다.]</h1></Search>
                 </Element>
             </Container>
         );
